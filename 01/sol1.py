@@ -1,11 +1,5 @@
-floor = 0
 with open('input.txt') as f:
-    for line in f:
-        for char in line:
-            if char == '(':
-                floor += 1
-            elif char == ")":
-                floor -= 1
+    print sum(1 if x == '(' else -1 
+              for x in f.read().strip())
 
-print 'Ending floor:', floor
 # 74

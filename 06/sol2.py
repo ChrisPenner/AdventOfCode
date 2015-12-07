@@ -21,4 +21,4 @@ with open('input.txt') as f:
                     lights[(x,y)] = lights[(x,y)] + 1
 
 print sum(lights.itervalues())
-# 53
+# 14687245

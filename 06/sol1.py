@@ -24,4 +24,4 @@ with open('input.txt') as f:
                     lights.add((x,y))
 
 print len(lights)
-# 258
+# 543903

@@ -1,32 +1,24 @@
-s = set([(0,0)])
-x1, y1 = 0, 0
-x2, y2 = 0, 0
+n = 2
+coords = [(0,0)] * n
+houses = set([(0,0)])
 
 with open('input.txt') as f:
     chars = f.read()
-    n = 2
+    # Chunk commands into pieces
     chunks = [chars[i:i+n] for i in xrange(0, len(chars), n)]
-    for c1, c2 in chunks:
-        if c1 == '^':
-            y1 -= 1
-        elif c1 == '>':
-            x1 += 1
-        elif c1 == 'v':
-            y1 += 1
-        elif c1 == '<':
-            x1 -= 1
+    for chunk in chunks:
+        for i, instruction in enumerate(chunk):
+            x, y = coords[i]
+            if instruction == '^':
+                y -= 1
+            elif instruction == '>':
+                x += 1
+            elif instruction == 'v':
+                y += 1
+            elif instruction == '<':
+                x -= 1
+            houses.add((x,y))
+            coords[i] = (x, y)
 
-        if c2 == '^':
-            y2 -= 1
-        elif c2 == '>':
-            x2 += 1
-        elif c2 == 'v':
-            y2 += 1
-        elif c2 == '<':
-            x2 -= 1
-
-        s.add((x1,y1))
-        s.add((x2,y2))
-
-print len(s)
+print len(houses)
 # 2639
