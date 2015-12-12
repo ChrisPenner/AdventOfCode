@@ -50,5 +50,10 @@ with open('input.txt') as f:
         # Store it
         wires[to_wire] = (command, tuple(args))
 
+initial_wires = wires.copy()
+result_a = resolve('a')
+# Reset to initial state, but with 'b' changed.
+wires = initial_wires
+wires['b'] = result_a
 print resolve('a')
-# 16076
+#2797
