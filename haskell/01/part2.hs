@@ -1,11 +1,11 @@
-values = map val
-    where val '(' = 1
-          val ')' = -1
-          val c = 0
+countParens :: String -> Int
+countParens = sum . map mapParen
+mapParen :: Char -> Int
+mapParen '(' = 1
+mapParen ')' = -1
 
-result = length . takeWhile (>= -1) . floorNums
-    where floorNums = scanl1 (+) . values
+countTill :: [Char] -> Int
+countTill = length . takeWhile (>= 0) . scanl (+) 0 . map mapParen
 
-main = do
-    input <- readFile "input.txt"
-    print $ result input
+main :: IO ()
+main = countTill <$> getContents >>= print

@@ -1,6 +1,7 @@
-main = do
-    input <- readFile "input.txt"
-    print $ sum (map val input)
-        where val '(' = 1
-              val ')' = -1
-              val c = 0
+countParens :: String -> Int
+countParens = sum . map mapParen
+mapParen '(' = 1
+mapParen ')' = -1
+
+main :: IO ()
+main = countParens <$> getContents >>= print
