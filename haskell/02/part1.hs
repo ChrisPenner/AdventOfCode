@@ -1,26 +1,11 @@
+import Data.List.Split (splitOn)
+
 main :: IO ()
-main = readFile "input.txt" >>= print . totalArea
+main = getContents >>= (return . sum . (fmap getSquareFootage) . lines) >>= print
 
-totalArea :: String -> Int
-totalArea = sum . (map $ paper . cast . parseSides) . lines
-
-cast :: [String] -> [Int]
-cast xs = map read xs 
-
-parseSides :: String -> [String]
-parseSides = splitBy 'x'
-
-paper :: [Int] -> Int
-paper (x:y:z:_) = (minimum sides) + (area sides)
-    where
-        sides :: [Int]
-        sides = [x*y, y*z, x*z]
-        area :: [Int] -> Int
-        area s = 2 * (sum s)
-
-
-splitBy :: Char -> String -> [String]
-splitBy delimiter = foldr f [[]]
-    where f c l@(x:xs)
-            | c == delimiter = []:l
-            | otherwise = (c:x):xs
+getSquareFootage :: String -> Int
+getSquareFootage box = area dims + slack dims
+    where dims =  read <$> splitOn "x" box
+          slack = minimum . sides
+          sides [l, w, h] = [l*w, w*h, h*l]
+          area [l, w, h] = 2*l*w + 2*w*h + 2*h*l

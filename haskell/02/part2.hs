@@ -1,25 +1,11 @@
-import Data.List
+import Data.List.Split (splitOn)
 
 main :: IO ()
-main = readFile "input.txt" >>= print . totalArea
+main = getContents >>= (return . sum . (fmap getRibbon) . lines) >>= print
 
-totalArea :: String -> Int
-totalArea = sum . (map $ ribbon . cast . parseSides) . lines
-
-cast :: [String] -> [Int]
-cast xs = map read xs 
-
-parseSides :: String -> [String]
-parseSides = splitBy 'x'
-
-ribbon :: [Int] -> Int
-ribbon sides@(x:y:z:_) = (2 * (min1 + min2)) + (product sides)
-    where
-        min1 = minimum sides :: Int
-        min2 = minimum (delete min1 sides) :: Int
-
-splitBy :: Char -> String -> [String]
-splitBy delimiter = foldr f [[]]
-    where f c l@(x:xs)
-            | c == delimiter = []:l
-            | otherwise = (c:x):xs
+getRibbon :: String -> Int
+getRibbon box = volume + (perimeter dims)
+    where dims =  read <$> splitOn "x" box
+          perimeter [l, w, h] = minimum [2*(l+w), 2*(w+h), 2*(h+l)]
+          sides [l, w, h] = [l*w, w*h, h*l]
+          volume = product dims
