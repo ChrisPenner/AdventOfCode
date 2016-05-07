@@ -1,7 +1,8 @@
 import Data.List.Split (splitOn)
 
 main :: IO ()
-main = getContents >>= (return . sum . (fmap getSquareFootage) . lines) >>= print
+main = print . sum . map getSquareFootage . lines =<< getContents
+main = print . sum . map getSquareFootage . lines =<< getContents
 
 getSquareFootage :: String -> Int
 getSquareFootage box = area dims + slack dims
