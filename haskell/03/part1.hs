@@ -1,16 +1,25 @@
-import Data.Set (Set)
 import Data.List (nub)
 
-main :: IO ()
-main = getContents >>= return . length . nub . visitedPoints >>= print
-
 data Point = Point Int Int deriving (Show, Eq)
+data Dir = U | D | L | R
 
-visitedPoints :: String -> [Point]
-visitedPoints = locations (Point 0 0)
-    where locations p [] = []
-          locations p (char:chars) = (next p char) : locations (next p char) chars
-          next (Point x y) '>' = Point (x + 1) y
-          next (Point x y) '<' = Point (x - 1) y
-          next (Point x y) 'v' = Point x (y + 1)
-          next (Point x y) '^' = Point x (y - 1)
+start :: Point
+start = Point 0 0
+
+main :: IO ()
+main = fmap (length . nub . reducer . fmap toDir) getContents >>= print
+
+toDir :: Char -> Dir
+toDir '>' = R
+toDir 'v' = D
+toDir '<' = L
+toDir '^' = U
+
+next :: Dir -> Point -> Point
+next  R (Point x y) = Point (x + 1) y
+next  L (Point x y) = Point (x - 1) y
+next  D (Point x y) = Point x (y + 1)
+next  U (Point x y) = Point x (y - 1)
+
+reducer :: [Dir] -> [Point]
+reducer = scanr next start
