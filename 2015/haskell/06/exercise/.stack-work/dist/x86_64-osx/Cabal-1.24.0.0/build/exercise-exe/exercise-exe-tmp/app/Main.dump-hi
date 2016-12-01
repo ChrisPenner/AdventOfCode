@@ -1,0 +1,390 @@
+
+==================== FINAL INTERFACE ====================
+2016-10-30 16:17:13.873333 UTC
+
+interface main@main:Main 8001
+  interface hash: 5911f37b156c928e540fcf65c483af73
+  ABI hash: b95501e0cfba35c5bfcbee6e3c40885b
+  export-list hash: 8fb92458c1d7324d73325f1a92f8b821
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: cbd5f901e2de45c79c5cf232c1ab0967
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Control.Arrow 29ee70aef11b50f3bae1135acf073ed5
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:Data.Tuple acb0ed10307ed88df6c81b8589f4de16
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO ad985d7a3fc986e9b9c610fb344d9106
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+60d5d02f303d7d1d833f4bc830b7325c
+  $fEqPoint :: GHC.Classes.Eq Main.Point
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Point Main.$fEqPoint_$c== Main.$fEqPoint_$c/= -}
+60d5d02f303d7d1d833f4bc830b7325c
+  $fEqPoint_$c/= :: Main.Point -> Main.Point -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Point) (w1 :: Main.Point) ->
+                 case w of ww { Main.Point ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Main.Point ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Main.$w$c/= ww4 ww2 ww9 ww7 } } } }) -}
+60d5d02f303d7d1d833f4bc830b7325c
+  $fEqPoint_$c== :: Main.Point -> Main.Point -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Point) (w1 :: Main.Point) ->
+                 case w of ww { Main.Point ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Main.Point ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Main.$w$c== ww4 ww2 ww9 ww7 } } } }) -}
+60d5d02f303d7d1d833f4bc830b7325c
+  $fShowPoint :: GHC.Show.Show Main.Point
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Point
+                  Main.$fShowPoint_$cshowsPrec
+                  Main.$fShowPoint_$cshow
+                  Main.$fShowPoint_$cshowList -}
+60d5d02f303d7d1d833f4bc830b7325c
+  $fShowPoint1 :: Main.Point -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Main.Point) (w1 :: GHC.Base.String) ->
+                 case w of ww { Main.Point ww1 ww2 ->
+                 Main.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+eaaa2ac13dd122c1ef190d9581db5c36
+  $fShowPoint2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Point "#) -}
+60d5d02f303d7d1d833f4bc830b7325c
+  $fShowPoint_$cshow :: Main.Point -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Main.Point) ->
+                 Main.$fShowPoint_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+60d5d02f303d7d1d833f4bc830b7325c
+  $fShowPoint_$cshowList :: [Main.Point] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__ @ Main.Point Main.$fShowPoint1) -}
+60d5d02f303d7d1d833f4bc830b7325c
+  $fShowPoint_$cshowsPrec ::
+    GHC.Types.Int -> Main.Point -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U(U))><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Main.Point)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Main.Point ww3 ww4 ->
+                 Main.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+dc50ae908ee3946b189558a9bb06fdf5
+  $tc'Point :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5505948349653030548##
+                   12042660288653537426##
+                   Main.$trModule
+                   Main.$tc'Point1) -}
+c0f234fa90f1b0cdea10b99573327a1f
+  $tc'Point1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Point"#) -}
+e772ff0b6206b2f8b823ab43945b8c1a
+  $tcPoint :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13959796377953732080##
+                   1338214167779958243##
+                   Main.$trModule
+                   Main.$tcPoint1) -}
+341401f617229370418b162202d9e0f8
+  $tcPoint1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Point"#) -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+f0fc0d325bf7960e5f4dad4d8d13e503
+  $w$c/= ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.I# x ->
+                      case ww3 of wild2 { GHC.Types.I# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x y) of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+8c9bbdcc4d8d6f4b784ff4f418601f28
+  $w$c== ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.eqInt ww1 ww3 }) -}
+6a0b9ad6b11fc02c1651d7bab30771c0
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U(U)><L,1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Int)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     case ww1 of ww3 { GHC.Types.I# ww4 ->
+                     case GHC.Show.$wshowSignedInt
+                            11#
+                            ww4
+                            (GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.showSpace1
+                               (case ww2 of ww5 { GHC.Types.I# ww6 ->
+                                case GHC.Show.$wshowSignedInt 11# ww6 x of ww7 { (#,#) ww8 ww9 ->
+                                GHC.Types.:
+                                  @ GHC.Types.Char
+                                  ww8
+                                  ww9 } })) of ww5 { (#,#) ww6 ww7 ->
+                     GHC.Types.: @ GHC.Types.Char ww6 ww7 } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char Main.$fShowPoint2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Main.$fShowPoint2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w))) }) -}
+a7fcd793b8606cac7211ca5df5b1d36e
+  $wunsafeDrop :: GHC.Prim.Int# -> [a1] -> [a1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U>,
+     Inline: [0] -}
+60d5d02f303d7d1d833f4bc830b7325c
+  data Point = Point GHC.Types.Int GHC.Types.Int
+894cf6d5d4e0f793207615a25cba2e53
+  getEven :: [a] -> [a]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+45bc03cfc03c242b2b6db911866c8d46
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+880ea0d37508c87aee26bead58685f2d
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        GHC.IO.Handle.FD.stdin
+                        s of ds { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (case GHC.List.$wlenAcc
+                           @ Main.Point
+                           (Data.OldList.nubBy
+                              @ Main.Point
+                              Main.$fEqPoint_$c==
+                              (GHC.Types.:
+                                 @ Main.Point
+                                 Main.start
+                                 (let {
+                                    x :: [Main.Point]
+                                    = case GHC.List.$wscanlGo
+                                             @ Main.Point
+                                             @ GHC.Types.Char
+                                             @ Main.Point
+                                             @ GHC.Types.Char
+                                             Main.main3
+                                             Main.start
+                                             (Main.getEven
+                                                @ GHC.Types.Char
+                                                (Main.$wunsafeDrop
+                                                   @ GHC.Types.Char
+                                                   1#
+                                                   ipv1)) of ww { (#,#) ww1 ww2 ->
+                                      ww2 }
+                                  } in
+                                  let {
+                                    x1 :: [Main.Point] = GHC.Types.: @ Main.Point Main.start x
+                                  } in
+                                  letrec {
+                                    go :: [GHC.Types.Char] -> Main.Point -> [Main.Point]
+                                      {- Arity: 2, Strictness: <S,1*U><L,1*U(U(U),U(U))> -}
+                                    = \ (ds1 :: [GHC.Types.Char]) (eta :: Main.Point) ->
+                                      case ds1 of wild {
+                                        [] -> x1
+                                        : y ys
+                                        -> let {
+                                             b' :: Main.Point
+                                             = case eta of ww { Main.Point ww1 ww2 ->
+                                               case y of ww3 { GHC.Types.C# ww4 ->
+                                               case ww4 of ds2 {
+                                                 DEFAULT -> Main.main2
+                                                 '<'#
+                                                 -> Main.Point
+                                                      (case ww1 of wild1 { GHC.Types.I# x2 ->
+                                                       GHC.Types.I# (GHC.Prim.-# x2 1#) })
+                                                      ww2
+                                                 '>'#
+                                                 -> Main.Point
+                                                      (case ww1 of wild1 { GHC.Types.I# x2 ->
+                                                       GHC.Types.I# (GHC.Prim.+# x2 1#) })
+                                                      ww2
+                                                 '^'#
+                                                 -> Main.Point
+                                                      ww1
+                                                      (case ww2 of wild1 { GHC.Types.I# x2 ->
+                                                       GHC.Types.I# (GHC.Prim.-# x2 1#) })
+                                                 'v'#
+                                                 -> Main.Point
+                                                      ww1
+                                                      (case ww2 of wild1 { GHC.Types.I# x2 ->
+                                                       GHC.Types.I# (GHC.Prim.+# x2 1#) }) } } }
+                                           } in
+                                           GHC.Types.: @ Main.Point b' (go ys b') }
+                                  } in
+                                  go (Main.getEven @ GHC.Types.Char ipv1) Main.start)))
+                           0# of ww2 { DEFAULT ->
+                    case GHC.Show.$wshowSignedInt
+                           0#
+                           ww2
+                           (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                    GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                   GHC.Types.True
+                   ipv }) -}
+55a53e6c5d1ab279858aefbbf4d7cae2
+  main2 :: Main.Point
+  {- Strictness: x -}
+31be969cfae156597bb7e6dd2f7bd2ea
+  main3 :: Main.Point -> GHC.Types.Char -> Main.Point
+  {- Arity: 2, Strictness: <S,1*U(U(U),U(U))><S(S),1*U(1*U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Main.Point) (w1 :: GHC.Types.Char) ->
+                 case w of ww { Main.Point ww1 ww2 ->
+                 case w1 of ww3 { GHC.Types.C# ww4 ->
+                 case ww4 of ds {
+                   DEFAULT -> Main.main2
+                   '<'#
+                   -> Main.Point
+                        (case ww1 of wild { GHC.Types.I# x ->
+                         GHC.Types.I# (GHC.Prim.-# x 1#) })
+                        ww2
+                   '>'#
+                   -> Main.Point
+                        (case ww1 of wild { GHC.Types.I# x ->
+                         GHC.Types.I# (GHC.Prim.+# x 1#) })
+                        ww2
+                   '^'#
+                   -> Main.Point
+                        ww1
+                        (case ww2 of wild { GHC.Types.I# x ->
+                         GHC.Types.I# (GHC.Prim.-# x 1#) })
+                   'v'#
+                   -> Main.Point
+                        ww1
+                        (case ww2 of wild { GHC.Types.I# x ->
+                         GHC.Types.I# (GHC.Prim.+# x 1#) }) } } }) -}
+4349ec3c473e838ca7589b87b44c4a21
+  main4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+4d680c1614b733e3e47e6ee1e7ff14e7
+  main5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+c0517ee5aa14064b7c967177dcb42dd4
+  start :: Main.Point
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Main.Point Main.main4 Main.main4) -}
+instance [safe] GHC.Classes.Eq [Main.Point] = Main.$fEqPoint
+instance [safe] GHC.Show.Show [Main.Point] = Main.$fShowPoint
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
